@@ -35,6 +35,6 @@ features_scaled = scaler.transform(features)
 if st.button("Predict"):
     try:
         prediction = model.predict(features_scaled)
-        st.write(f"Predicted House Price: **${prediction[0]:,.2f}**")
+        st.write(f"Predicted House Price: **${prediction[0]*100:,.2f}**")
     except Exception as e:
         st.write(f"Error: {e}")
